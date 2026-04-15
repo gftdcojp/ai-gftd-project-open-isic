@@ -50,6 +50,7 @@ export const SECTIONS: Section[] = [
 
 export const DIVISIONS: Division[] = [
   { code: "01", nameEn: "Crop and animal production, hunting and related service activities", section: "A" },
+  { code: "02", nameEn: "Forestry and logging", section: "A" },
 ];
 
 export const GROUPS: Group[] = [
@@ -59,6 +60,8 @@ export const GROUPS: Group[] = [
   { code: "014", nameEn: "Animal production", division: "01" },
   { code: "015", nameEn: "Mixed farming", division: "01" },
   { code: "016", nameEn: "Support activities to agriculture and post-harvest crop activities", division: "01" },
+  { code: "017", nameEn: "Hunting, trapping and related service activities", division: "01" },
+  { code: "021", nameEn: "Silviculture and other forestry activities", division: "02" },
 ];
 
 export function didForSection(code: string)  { return `${APP_DID}:section:${code}`; }
