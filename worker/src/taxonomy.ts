@@ -57,6 +57,7 @@ export const GROUPS: Group[] = [
   { code: "012", nameEn: "Growing of perennial crops", division: "01" },
   { code: "013", nameEn: "Plant propagation", division: "01" },
   { code: "014", nameEn: "Animal production", division: "01" },
+  { code: "015", nameEn: "Mixed farming", division: "01" },
 ];
 
 export function didForSection(code: string)  { return `${APP_DID}:section:${code}`; }
