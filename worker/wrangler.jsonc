@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ai-gftd-open-isic",
+  "main": "src/app.ts",
+  "compatibility_date": "2026-04-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "account_id": "${CF_ACCOUNT_ID}",
+  "workers_dev": false,
+  "routes": [{ "pattern": "open-isic.gftd.ai/*", "zone_name": "gftd.ai" }],
+  "services": [{ "binding": "PDS", "service": "ai-gftd-atproto" }],
+  "vars": {
+    "APP_HANDLE": "open-isic.gftd.ai",
+    "PRIMARY_DID": "did:web:open-isic.gftd.ai"
+  },
+  "observability": { "enabled": true }
+}

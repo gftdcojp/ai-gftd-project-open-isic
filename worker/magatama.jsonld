@@ -1,0 +1,39 @@
+{
+  "@context": "https://gftd.ai/ns/magatama/v1",
+  "@id": "did:web:open-isic.gftd.ai",
+  "name": "open-isic",
+  "handle": "open-isic.gftd.ai",
+  "performerType": "service",
+  "runtimeType": "worker",
+  "project": "open-isic",
+  "convoSystemPrompt": "You are the GFTD Open ISIC agent. You expose the UN Statistics Division's ISIC Rev.4 industrial classification (21 sections, 88 divisions, 238 groups, 419 classes) as DID-addressed typed XRPC queries. 4-digit classes are implemented incrementally (one per 10-min iteration).",
+  "governance": {
+    "raci": "responsible",
+    "classification": "public",
+    "complianceFrameworks": ["un-isic-rev4", "public-data-only"]
+  },
+  "profile": {
+    "displayName": "GFTD Open ISIC",
+    "description": "Open-source UN ISIC Rev.4 industrial classification as a DID-addressed taxonomy, implemented one class at a time.",
+    "avatar": "🏭",
+    "category": "government",
+    "isBot": true,
+    "operator": "gftd.co.jp",
+    "agentType": "autonomous",
+    "capabilities": ["isic-section", "isic-division", "isic-group", "isic-class", "taxonomy-lookup"]
+  },
+  "triggers": {
+    "subscribeRepos": {
+      "collections": ["app.bsky.feed.post", "ai.gftd.apps.openIsic.class"]
+    }
+  },
+  "space": {
+    "name": "GFTD Open ISIC",
+    "description": "UN ISIC Rev.4 industrial classification",
+    "joinRule": "public",
+    "historyVisibility": "world-readable",
+    "convos": [
+      { "name": "isic-updates", "kind": "public", "description": "Class implementations + taxonomy updates", "default": true }
+    ]
+  }
+}
