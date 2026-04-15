@@ -1,8 +1,8 @@
 // Generated from data/classes/*.json at build time. As each new class JSON is
 // added under data/classes/, append an import + CLASSES entry here.
 //
-// Progress: 25 / 419 ISIC Rev.4 4-digit classes implemented.
-// Completed groups: 011, 012, 013, 014, 015.
+// Progress: 26 / 419 ISIC Rev.4 4-digit classes implemented.
+// Completed groups: 011, 012, 013, 014, 015. Group 016 in progress (0161).
 
 import c0111 from "../../data/classes/0111.json";
 import c0112 from "../../data/classes/0112.json";
@@ -29,6 +29,7 @@ import c0145 from "../../data/classes/0145.json";
 import c0146 from "../../data/classes/0146.json";
 import c0149 from "../../data/classes/0149.json";
 import c0150 from "../../data/classes/0150.json";
+import c0161 from "../../data/classes/0161.json";
 import type { IsicClass } from "./taxonomy";
 
 export const CLASSES: Record<string, IsicClass> = {
@@ -57,6 +58,7 @@ export const CLASSES: Record<string, IsicClass> = {
   "0146": c0146 as IsicClass,
   "0149": c0149 as IsicClass,
   "0150": c0150 as IsicClass,
+  "0161": c0161 as IsicClass,
 };
 
 export const IMPLEMENTED_COUNT = Object.keys(CLASSES).length;
