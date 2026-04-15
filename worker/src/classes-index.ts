@@ -1,8 +1,8 @@
 // Generated from data/classes/*.json at build time. As each new class JSON is
 // added under data/classes/, append an import + CLASSES entry here.
 //
-// Progress: 32 / 419 ISIC Rev.4 4-digit classes implemented.
-// Completed groups: 011, 012, 013, 014, 015, 016, 017 (Division 01), 021, 022.
+// Progress: 34 / 419 ISIC Rev.4 4-digit classes implemented.
+// Completed groups: 011, 012, 013, 014, 015, 016, 017 (Division 01), 021, 022, 023, 024 (Division 02).
 
 import c0111 from "../../data/classes/0111.json";
 import c0112 from "../../data/classes/0112.json";
@@ -36,6 +36,8 @@ import c0164 from "../../data/classes/0164.json";
 import c0170 from "../../data/classes/0170.json";
 import c0210 from "../../data/classes/0210.json";
 import c0220 from "../../data/classes/0220.json";
+import c0230 from "../../data/classes/0230.json";
+import c0240 from "../../data/classes/0240.json";
 import type { IsicClass } from "./taxonomy";
 
 export const CLASSES: Record<string, IsicClass> = {
@@ -71,9 +73,11 @@ export const CLASSES: Record<string, IsicClass> = {
   "0170": c0170 as IsicClass,
   "0210": c0210 as IsicClass,
   "0220": c0220 as IsicClass,
+  "0230": c0230 as IsicClass,
+  "0240": c0240 as IsicClass,
 };
 
 export const IMPLEMENTED_COUNT = Object.keys(CLASSES).length;
 export const TOTAL_CLASSES = 419;
 
-export const COMPLETED_GROUPS: string[] = ["011", "012", "013", "014", "015", "016", "017", "021", "022"];
+export const COMPLETED_GROUPS: string[] = ["011", "012", "013", "014", "015", "016", "017", "021", "022", "023", "024"];
